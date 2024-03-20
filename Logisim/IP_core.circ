@@ -54,6 +54,65 @@
   <circuit name="main">
     <a name="circuit" val="main"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
-    <a name="simulationFrequency" val="128.0"/>
+    <a name="simulationFrequency" val="1000.0"/>
+    <comp lib="0" loc="(110,140)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="radix" val="10unsigned"/>
+      <a name="width" val="10"/>
+    </comp>
+    <comp lib="0" loc="(190,220)" name="Clock">
+      <a name="label" val="CLK"/>
+    </comp>
+    <comp lib="0" loc="(210,100)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="INC1_DEC0"/>
+    </comp>
+    <comp lib="0" loc="(210,120)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="LOAD"/>
+    </comp>
+    <comp lib="0" loc="(210,170)" name="Clock">
+      <a name="highDuration" val="100"/>
+      <a name="label" val="PWM"/>
+      <a name="lowDuration" val="900"/>
+    </comp>
+    <comp lib="0" loc="(240,280)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="RESET1"/>
+    </comp>
+    <comp lib="0" loc="(310,140)" name="Probe">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="radix" val="10unsigned"/>
+    </comp>
+    <comp lib="0" loc="(320,170)" name="Probe">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="4" loc="(270,140)" name="Counter">
+      <a name="appearance" val="classic"/>
+      <a name="max" val="0x3ff"/>
+      <a name="width" val="10"/>
+    </comp>
+    <comp lib="8" loc="(172,70)" name="Text">
+      <a name="text" val="Incrementa = 1 Decrementa = 0"/>
+    </comp>
+    <wire from="(110,140)" to="(240,140)"/>
+    <wire from="(190,220)" to="(250,220)"/>
+    <wire from="(210,100)" to="(250,100)"/>
+    <wire from="(210,120)" to="(220,120)"/>
+    <wire from="(210,170)" to="(220,170)"/>
+    <wire from="(220,120)" to="(220,130)"/>
+    <wire from="(220,130)" to="(240,130)"/>
+    <wire from="(220,150)" to="(220,170)"/>
+    <wire from="(220,150)" to="(240,150)"/>
+    <wire from="(240,280)" to="(260,280)"/>
+    <wire from="(250,100)" to="(250,120)"/>
+    <wire from="(250,160)" to="(250,220)"/>
+    <wire from="(260,160)" to="(260,280)"/>
+    <wire from="(270,140)" to="(310,140)"/>
+    <wire from="(270,150)" to="(300,150)"/>
+    <wire from="(300,150)" to="(300,170)"/>
+    <wire from="(300,170)" to="(320,170)"/>
   </circuit>
 </project>
