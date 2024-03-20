@@ -1,15 +1,15 @@
 library ieee;
 use ieee.std_logic_1164.ALL;
 use ieee.std_logic_arith.all;
-use ieee.STD_LOGIC_UNSIGNED.all;
+use ieee.std_logic_unsigned.all;
 
-entity counter is
+entity COUNTER is
     Port ( rst,clk,up_dwn : in std_logic;
            pwm_en : in std_logic;
            o: out std_logic_vector(9 downto 0));
-end counter;
+end COUNTER;
 
-architecture count_arch of counter is
+architecture ckt of COUNTER is
     signal count : std_logic_vector(9 downto 0);
     
     begin
@@ -29,4 +29,4 @@ architecture count_arch of counter is
     
     o <= count;
 
-end count_arch;
+end ckt;
